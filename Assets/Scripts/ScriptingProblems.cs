@@ -11,8 +11,8 @@ public class ScriptingProblems : MonoBehaviour
 	{
 		//SwapNumbers();
 		//FindHighestNumber();
-		IncreaseAge();
-		//MovePosition();
+		//IncreaseAge();
+		MovePosition();
 	}
 
 	public void SwapNumbers()
@@ -61,6 +61,8 @@ public class ScriptingProblems : MonoBehaviour
 
 		public Person(int inAge, string inName)
 		{
+			age = inAge;
+				name = inName;
 		}
 	}
 
@@ -84,7 +86,7 @@ public class ScriptingProblems : MonoBehaviour
 	{
 		Vector3 currentPosition = new Vector3(1.5f, 2.5f, 3.5f);
 		premiseText.text = "Moving the position " + currentPosition.ToString();
-		int shiftedX = 3 + (int)currentPosition.x;
+		float shiftedX = 3 + (float)currentPosition.x;
 		currentPosition.x = shiftedX;
 		resultText.text = "Position is now " + currentPosition.ToString();
 	}
