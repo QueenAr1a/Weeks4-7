@@ -26,7 +26,7 @@ public class TreeMover : MonoBehaviour
         Vector3 TreeposinScreen = Camera.main.WorldToScreenPoint(transform.position);
         //this makes sure the tree is withing the screen point just making it easoier to work with especially with things like speed and screen.width just lets me track its position
 
-        if(TreeposinScreen.x > Screen.width / 3)
+        if(TreeposinScreen.x > Screen.width /2.2)
             //this slows down the tree when entering the machine to make it look cooler
         {
             speed = 2;
@@ -34,12 +34,12 @@ public class TreeMover : MonoBehaviour
         }
 
 
-        if (TreeposinScreen.x > Screen.width/1.5)
+        if (TreeposinScreen.x > Screen.width/1.55)
         {
             Tree.sprite = wood;
             //changes the sprite to the wood from the tree
         }
-        if (TreeposinScreen.x > Screen.width / 1.7)
+        if (TreeposinScreen.x > Screen.width / 1.55)
         {
             transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             //changes the wood size (was WAY to big)
