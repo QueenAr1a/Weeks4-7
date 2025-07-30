@@ -14,7 +14,7 @@ public class GameOverScore : MonoBehaviour
     void Start()
     {
     
-      spawner = GameObject.Find("Spawner");
+      spawner = GameObject.Find("Spawner");    //https://docs.unity3d.com/6000.0/Documentation/ScriptReference/GameObject.Find.html
         treespawner count = GetComponent<treespawner>();
         
 
@@ -29,4 +29,5 @@ public class GameOverScore : MonoBehaviour
             
     
     }
+
 }
