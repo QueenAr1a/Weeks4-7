@@ -22,7 +22,7 @@ public class TreeMover : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.right * speed * Time.deltaTime;
-        //moves the tree to the right by the speed in the inspector every frame
+        //moves the tree to the right by the speed in the inspector every frame and muliplied by delta time
         Vector3 TreeposinScreen = Camera.main.WorldToScreenPoint(transform.position);
         //this makes sure the tree is withing the screen point just making it easoier to work with especially with things like speed and screen.width just lets me track its position
 

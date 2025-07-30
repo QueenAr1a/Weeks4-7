@@ -16,7 +16,10 @@ public class hourhandrotate : MonoBehaviour
     void Update()
     {
         Vector3 hourhand = transform.eulerAngles;
+        // just giving the vector 3 its variables through transform 
         hourhand.z += -12 * Time.deltaTime;
+        // making it do one whole rotation in 30 seconds (12 degrees persecond) using delta time for consistancy
         transform.eulerAngles = hourhand;
+       
     }
 }
