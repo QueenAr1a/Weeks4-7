@@ -13,7 +13,9 @@ public class treespawner : MonoBehaviour
     public GameObject prefabToSpawn;
     public float Treecount;
     bool treespawn = false;
-    public float Timer = 0;
+    public float timer = 0;
+    bool gamestateon = true;
+    public GameObject Panel;
     // using this to actually get the trees to spawn
     // Start is called before the first frame update
     void Start()
@@ -26,22 +28,38 @@ public class treespawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Timer += Time.deltaTime;
+        timer += Time.deltaTime;
+        if (gamestateon == true)
+        {
 
-        if ( treespawn == true){
-            GameObject spawnedtree = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
-            // this gets the tree and spawns it at teh position of the spawner 
-            Destroy(spawnedtree, 10);
-            treespawn = false;
+
+            
+
+            if (treespawn == true)
+            {
+                GameObject spawnedtree = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
+                // this gets the tree and spawns it at teh position of the spawner 
+                Destroy(spawnedtree, 10);
+                treespawn = false;
+            }
         }
+
+        if (timer > 30)
+        {
+            gamestateon = false;
+            Panel.SetActive(true);
+        }
+        
     }
 
 
         
     public void OnTreeSpawn()
     {
+
         if (currentfuel > minfuel)
         {
+           
             treespawn = true;
             currentfuel -= fueltake;
             FuelBar.value = currentfuel / Maxfuel;
@@ -53,7 +71,10 @@ public class treespawner : MonoBehaviour
 
     public void OnRefuel()
     {
-        currentfuel = Maxfuel;
+        if (gamestateon == true)
+        {
+            currentfuel = Maxfuel;
+        }
     }
 
 }

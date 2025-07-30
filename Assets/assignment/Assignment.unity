@@ -2082,7 +2082,7 @@ MonoBehaviour:
   currentfuel: 0
   prefabToSpawn: {fileID: 1678720561758409827, guid: d696e621ec9c4254c80976dedd00e768, type: 3}
   Treecount: 0
-  Timer: 0
+  timer: 0
 --- !u!4 &1327688462
 Transform:
   m_ObjectHideFlags: 0
