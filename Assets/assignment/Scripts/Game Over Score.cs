@@ -8,7 +8,7 @@ public class GameOverScore : MonoBehaviour
     // setting all the public variables ill need to set for the game
     public GameObject spawner; //this is to attach to the spawner so i can take the tree count
     public treespawner count; //the script that i take the variable from
-    public GameObject Dobetter; // these next 3 are different endings enabled using SETACTIVE depending on tree count
+    public GameObject Dobetter; // these next 3 are different endings enabled using SETACTIVE depending on tree count as end screens
     public GameObject OKIG;
     public GameObject MODEL;
     public TextMeshProUGUI treecoun; // the text objeect to display the score
